@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!--navbar-->
+    <div class="navbar">
+        <div class="nav-el">
+            <a href="today">Today</a>
+        </div>
+        <div class="nav-el">
+         <a href="#">Work</a>
+        </div>
+    </div>
+    <!--Date-Box-->
+ <% const month = ["January","February","March","April","May","June","July","August","September","October","November","December"]; %>
+
+ <% const d = new Date(); %>
+ <% let month_n = month[d.getMonth()]; %>
+
+ <%  const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]; %>
+
+ <% const dw = new Date(); %>
+ <% let day = weekday[dw.getDay()]; %>
+
+ <% const dd = new Date(); %>
+  <% let date = dd.getDate(); %>
+
+     <div class="box">
+        <h1><%= day %>,<%= month_n %> <%= date %></h1>
+     </div>
+
+    <div class="container">  
+      <% for(var i=0; i<newListItem.length ; i++) { %>
+        <div class="input-box">
+          <input type="checkbox">
+           <p><%= newListItem[i] %></p>
+            </div>
+    <%  }   %>
+
+    
+    
+     <form class="input-box" action="/" method="post">
+        <input type="text" name="newItem" autocomplete="off" placeholder="Enter new task">
+        <button type="submit">+</button>
+     </form>
+</div>
+    <p class="footer">developed by Ahmed Noushad</p>
+</body>
+</html>
